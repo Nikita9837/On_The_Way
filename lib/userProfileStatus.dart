@@ -8,17 +8,18 @@ class userProfileStatus extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        toolbarHeight: 65,
         backgroundColor: Color(0xFF03417A),
-        title: Center(
-          child: Text(
-            'Profile Status',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Color(0xFFFFCD1A),
-            ),
+        title: Text(
+          'Profile Status',
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFFFFCD1A),
           ),
         ),
+        centerTitle: true,
       ),
       body: Container(
 
@@ -28,7 +29,7 @@ class userProfileStatus extends StatelessWidget {
         ),
 
         padding: EdgeInsets.all(5.0),
-        margin: EdgeInsets.all(15.0),
+        margin: EdgeInsets.all(10.0),
         child: Column(
           children: [
             Container(
@@ -38,7 +39,7 @@ class userProfileStatus extends StatelessWidget {
               ),
             //  pic username gender age
               padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
 
               child: Row(
                 children: [
@@ -57,7 +58,6 @@ class userProfileStatus extends StatelessWidget {
                          width: 130,
                          height: 130,
                          // fit:BoaFit.fill,
-
                      ),
                    ),
                  ),
@@ -66,7 +66,7 @@ class userProfileStatus extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.all(20),
+                          margin: EdgeInsets.all(10),
                           child: Text(
                             'Username',
                             style: TextStyle(
@@ -105,7 +105,7 @@ class userProfileStatus extends StatelessWidget {
             Container(
             //  pick up
               padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 color: Colors.white,
@@ -125,7 +125,7 @@ class userProfileStatus extends StatelessWidget {
             Container(
             //  drop out
               padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 color: Colors.white,
@@ -168,7 +168,7 @@ class userProfileStatus extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.40,
                   height: MediaQuery.of(context).size.height * 0.10,
                   padding: EdgeInsets.all(5.0),
-                  margin: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.all(5.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: Colors.white,
@@ -187,41 +187,20 @@ class userProfileStatus extends StatelessWidget {
 
               ],
             ),
-            Container(
-            //  view current location
-              padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.all(10.0),
-              // color: Colors.white,
-              child: SizedBox(
-                height: 50,
-                width: MediaQuery.of(context).size.width * 1,
-                child: ElevatedButton(onPressed: () {
-                //  display current location
-                },
-                child: Text(
-                  'Current location',
-                  style: TextStyle(
-                    fontSize: 25,
-                  ),
 
-                ),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.redAccent[200], // background
-                    onPrimary: Colors.white, // foreground
-                  ),
-                ),
-              ),
-            ),
             Container(
             //  button for acceptance of request
               padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
               child: SizedBox(
                 height: 50,
                 width: MediaQuery.of(context).size.width * 1,
                 child: ElevatedButton(
                   onPressed: () {
                   //  display current location
+
+
+
                 },
                   child: Text(
                       'Accept',
@@ -238,9 +217,37 @@ class userProfileStatus extends StatelessWidget {
               ),
             ),
             Container(
+              //  view current location
+              padding: EdgeInsets.all(5.0),
+              margin: EdgeInsets.all(5.0),
+              // color: Colors.white,
+              child: SizedBox(
+                height: 50,
+                width: MediaQuery.of(context).size.width * 1,
+                child: ElevatedButton(onPressed: () {
+                  //  delete the request
+
+
+
+                },
+                  child: Text(
+                    'Deny',
+                    style: TextStyle(
+                      fontSize: 25,
+                    ),
+
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.redAccent[200], // background
+                    onPrimary: Colors.white, // foreground
+                  ),
+                ),
+              ),
+            ),
+            Container(
               //  drop out
               padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.all(5.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 color: Colors.white,
