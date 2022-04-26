@@ -81,24 +81,41 @@ class ListCard extends StatelessWidget {
             )
           ],
         ),
-        trailing: Container(
-          padding: EdgeInsets.all(5),
-          child: SizedBox(
-            height: 45,
-            width: 45,
-            child: FloatingActionButton(
-              backgroundColor: Colors.green[400],
+        // trailing: Container(
+        //   height: 50,
+        //   width: 50,
+        //   // color: Colors.yellow,
+        //   decoration: BoxDecoration(
+        //     border: Border.all(
+        //       color:Colors.lightGreen,
+        //       width: 2,
+        //     ),
+        //     // borderRadius: ,
+        //   ),
+        //   // padding: EdgeInsets.all(5),
+        //   child: IconButton(
+        //     alignment: Alignment.center,
+        //     onPressed: (){},
+        //     icon: Icon(
+        //         Icons.remove_red_eye_outlined,
+        //       color: Colors.green,
+        //       size: 35,
+        //     ),
+        //   ),
+        // ),
 
-              onPressed: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const userProfileStatus()),
-                )
-              },
-              child: Icon(Icons.remove_red_eye_outlined),
+
+        trailing: IconButton(
+            padding: EdgeInsets.all(5),
+            alignment: Alignment.center,
+            icon:Icon(
+                Icons.arrow_forward_ios,
+            size: 40,
             ),
+            color: Colors.green,
+            onPressed: (){},
           ),
-        ),
+
 
       ),
     );

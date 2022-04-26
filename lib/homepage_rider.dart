@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:on_the_way/userRequests.dart';
 
-class userHomepage extends StatefulWidget {
-  const userHomepage({Key? key}) : super(key: key);
+class riderHomepage extends StatefulWidget {
+  const riderHomepage({Key? key}) : super(key: key);
 
   @override
-  _userHomepageState createState() => _userHomepageState();
+  _riderHomepageState createState() => _riderHomepageState();
 }
 
-class _userHomepageState extends State<userHomepage> {
-
+class _riderHomepageState extends State<riderHomepage> {
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +18,13 @@ class _userHomepageState extends State<userHomepage> {
         backgroundColor: Color(0xFF03417A),
         leading: Icon(
             Icons.menu_rounded,
-          size: 50),
+            size: 50),
         leadingWidth: MediaQuery.of(context).size.width * 0.23,
         title: SizedBox(
-        width: 50,
-        height: 50,
-        child: Image.asset('images/logomp_sz.png'),
-      ),
+          width: 50,
+          height: 50,
+          child: Image.asset('images/logomp_sz.png'),
+        ),
         centerTitle: true,
         actions: [
           SizedBox(
@@ -37,7 +35,6 @@ class _userHomepageState extends State<userHomepage> {
             ),
           ),
         ],
-
       ),
       body: Stack(
         children: <Widget>[
@@ -53,25 +50,24 @@ class _userHomepageState extends State<userHomepage> {
               color: Colors.black12,
               child: Row(
                 children: <Widget>[
-               Container(
-                 padding: EdgeInsets.all(5),
-                 child: Icon(
-                          Icons.location_searching_sharp,
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    child: Icon(
+                      Icons.location_searching_sharp,
                       size: 30,
-                 ),
-               ),
-
+                    ),
+                  ),
                   Expanded(
                     child: TextField(
                       cursorColor: Colors.black,
                       keyboardType: TextInputType.text,
                       textInputAction: TextInputAction.go,
                       decoration: InputDecoration(
-                        fillColor: Color(0xFFFFF2C2),
+                          fillColor: Color(0xFFFFF2C2),
                           border: InputBorder.none,
                           contentPadding:
                           EdgeInsets.symmetric(horizontal: 15),
-                          hintText: "Search..."),
+                          hintText: "Enter current location"),
                     ),
                   ),
                 ],
@@ -103,27 +99,9 @@ class _userHomepageState extends State<userHomepage> {
                           border: InputBorder.none,
                           contentPadding:
                           EdgeInsets.symmetric(horizontal: 15),
-                          hintText: "Search..."),
+                          hintText: "Enter destination"),
                     ),
                   ),
-                  // Container(
-                  //   padding: EdgeInsets.all(5),
-                  //   height: 50,
-                  //   width: 50,
-                  //   child:  IconButton(
-                  //     splashColor: Color(0xFFFFF2C2),
-                  //     icon: Icon(
-                  //       Icons.search_sharp,
-                  //       size: 30,
-                  //     ),
-                  //     onPressed: () => {
-                  //       Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(builder: (context) => const userRequests()),
-                  //       )
-                  //     },
-                  //   ),
-                  // )
                 ],
               ),
             ),
