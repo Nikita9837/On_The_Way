@@ -16,9 +16,14 @@ class _riderHomepageState extends State<riderHomepage> {
       appBar: AppBar(
         toolbarHeight: 65,
         backgroundColor: Color(0xFF03417A),
-        leading: Icon(
-            Icons.menu_rounded,
-            size: 50),
+        leading: IconButton(
+          onPressed: ()=>{
+          // show menu
+          },
+          icon: Icon(
+              Icons.menu_rounded,
+              size: 50),
+        ),
         leadingWidth: MediaQuery.of(context).size.width * 0.23,
         title: SizedBox(
           width: 50,
@@ -29,9 +34,14 @@ class _riderHomepageState extends State<riderHomepage> {
         actions: [
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.23 ,
-            child: Icon(
-                Icons.account_circle_outlined,
-                size: 50
+            child: IconButton(
+              onPressed: ()=>{
+                // navigate to rider's profile
+              },
+              icon: Icon(
+                  Icons.account_circle_outlined,
+                  size: 50
+              ),
             ),
           ),
         ],

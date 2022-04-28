@@ -113,7 +113,10 @@ class ListCard extends StatelessWidget {
             size: 40,
             ),
             color: Colors.green,
-            onPressed: (){},
+            onPressed: ()=>{
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const userProfileStatus()),)
+            },
           ),
 
 

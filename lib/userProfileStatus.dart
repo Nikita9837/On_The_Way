@@ -8,7 +8,7 @@ class userProfileStatus extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        // automaticallyImplyLeading: false,
         toolbarHeight: 65,
         backgroundColor: Color(0xFF03417A),
         title: Text(
@@ -117,7 +117,6 @@ class userProfileStatus extends StatelessWidget {
                   'Pick Up location',
                   style: TextStyle(
                     fontSize: 20,
-
                   ),
                 ),
               ),
@@ -182,9 +181,7 @@ class userProfileStatus extends StatelessWidget {
                       ),
                     ),
                   ),
-                )
-
-
+                ),
               ],
             ),
 
