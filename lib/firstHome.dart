@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:on_the_way/Screens/rate/rate.dart';
 import 'package:on_the_way/homepage_rider.dart';
 
 //testing routing - AJS
@@ -68,6 +69,27 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text(
                 'userHomepage',
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blueAccent, // background
+                onPrimary: Colors.white, // foreground
+              ),
+            ),
+
+            ElevatedButton(
+              onPressed: () => {
+                // userHomepage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RateScreen()),
+                )
+              },
+              child: Text(
+                'Ratings',
                 style: TextStyle(
                   fontSize: 25,
                   color: Colors.white,
