@@ -134,8 +134,27 @@ class RateScreen extends StatelessWidget {
 
                         ),
                       ),
-                    )
-
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(25),
+                      padding: EdgeInsets.all(10),
+                      child: ElevatedButton(
+                          onPressed: (){
+                          //  backend code
+                          },
+                          child: Text(
+                            'Submit',
+                            style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                          ),
+                          ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Color(0xFF03417A), // background
+                          onPrimary: Colors.white, // foreground
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               )
